@@ -1,0 +1,13 @@
+tr, th {
+	color: tomato;
+	background-color: thistle;
+}
+
+td:hover {
+	color: slateblue;
+	background-color: wheat;
+}
+
+table {
+	border: 1px solid midnightblue;
+}
