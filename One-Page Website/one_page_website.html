@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>The Ocean Deep | Resort</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/one_page_website.js" defer></script>
 </head>
 
 <body>
@@ -41,80 +42,79 @@
 	<section>
 		<div id="gallery">
 			<h1>Gallery</h1>
-			<div>
 
-				<!-- PHOTO-CONTAINER 1 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_1.webp" alt="Submersible">
-					</div>
+			<!--Thumbnails used to open the lightbox-->
+			<div class="row">
+				<div class="column">
+					<img src=".\images\thumb_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
+						alt="Shipwreck">
 				</div>
-				<!-- END PHOTO-CONTAINER 1 -->
-
-				<!-- PHOTO-CONTAINER 2 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_2.jpg" alt="Shipwreck">
-					</div>
+				<div class="column">
+					<img src=".\images\thumb_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
+						alt="Jellyfish">
 				</div>
-				<!-- END PHOTO-CONTAINER 2 -->
-
-				<!-- PHOTO-CONTAINER 3 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_3.jpg" alt="Oceanscape">
-					</div>
+				<div class="column">
+					<img src=".\images\thumb_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+						alt="Anglerfish">
 				</div>
-				<!-- END PHOTO-CONTAINER 3 -->
-
-				<!-- PHOTO-CONTAINER 4 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_4.jpg" alt="Jellyfish">
-					</div>
+				<div class="column">
+					<img src=".\images\thumb_4.png" onclick="openModal();currentSlide(4)" class="hover-shadow"
+						alt="Octopus">
 				</div>
-				<!-- END PHOTO-CONTAINER 4 -->
+			</div>
 
-				<!-- PHOTO-CONTAINER 5 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_5.jpg" alt="Anglerfish">
+			<!--The Modal/Lightbox-->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="./images/big_1.jpg" style="width:100%;">
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 5 -->
 
-				<!-- PHOTO-CONTAINER 6 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_6.webp" alt="Blobfish">
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="./images/big_2.jpg" style="width:100%;">
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 6 -->
 
-				<!-- PHOTO-CONTAINER 7 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_7.jpg" alt="Shipwreck">
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="./images/big_3.jpg" style="width:100%;">
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 7 -->
 
-				<!-- PHOTO-CONTAINER 8 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_8.webp" alt="Octopus">
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="./images/big_4.png" style="width:100%;">
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 8 -->
 
-				<!-- PHOTO-CONTAINER 9 -->
-				<div>
-					<div>
-						<img src=".\images\thumb\thumb_9.jpg" alt="Shipwreck">
+					<!--Next/Previous controls-->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!--Caption text-->
+					<div class="caption-container">
+						<p id="caption"></p>
 					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 9 -->
 
+					<!--Thumbnail image controls-->
+					<div class="column">
+						<img class="demo" src="./images/thumb_1.jpg" onclick="currentSlide(1)" alt="Shipwreck">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/thumb_2.jpg" onclick="currentSlide(2)" alt="Jellyfish">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/thumb_3.jpg" onclick="currentSlide(3)" alt="Anglerfish">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/thumb_4.png" onclick="currentSlide(4)" alt="Octopus">
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</section>
